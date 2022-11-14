@@ -11,7 +11,7 @@
         },
         "vmName": {
             "type": "string",
-            "defaultValue": "az104-06-vm",
+            "defaultValue": "az104-05-vm",
             "metadata": {
                 "description": "VM name Prefix"
             }
@@ -38,12 +38,12 @@
     },
     "variables": {
         "vmExtensionName": "customScriptExtension",
-        "nic": "az104-06-nic",
-        "virtualNetworkNames": "[createArray('az104-06-vnet01','az104-06-vnet01','az104-06-vnet2','az104-06-vnet3')]",
-        "virtualNetworkNamestbc": "[createArray('az104-06-vnet01','az104-06-vnet2','az104-06-vnet3')]",
+        "nic": "az104-05-nic",
+        "virtualNetworkNames": "[createArray('az104-05-vnet01','az104-05-vnet01','az104-05-vnet2','az104-05-vnet3')]",
+        "virtualNetworkNamestbc": "[createArray('az104-05-vnet01','az104-05-vnet2','az104-05-vnet3')]",
         "VNetPrefixes":"[createArray('10.60','10.62','10.63')]",
-        "nsgNames": "[createArray('az104-06-nsg01','az104-06-nsg01','az104-06-nsg2','az104-06-nsg3')]",
-        "nsgNamestbc": "[createArray('az104-06-nsg01','az104-06-nsg2','az104-06-nsg3')]",
+        "nsgNames": "[createArray('az104-05-nsg01','az104-05-nsg01','az104-05-nsg2','az104-05-nsg3')]",
+        "nsgNamestbc": "[createArray('az104-05-nsg01','az104-05-nsg2','az104-05-nsg3')]",
         "subnetName": "subnet",
         "subnetRefs": "[createArray(0,1,0,0)]",
         "computeApiVersion": "2018-06-01",
@@ -152,12 +152,12 @@
             "apiVersion": "[variables('networkApiVersion')]",
             "location": "[resourceGroup().location]",
             "comments": "Virtual Network Subnet for VNet01",
-            "name": "az104-06-vnet01/subnet1",
+            "name": "az104-05-vnet01/subnet1",
             "properties": {
                 "addressPrefix": "10.60.1.0/24"
             },
             "dependsOn": [
-                "Microsoft.Network/virtualNetworks/az104-06-vnet01"
+                "Microsoft.Network/virtualNetworks/az104-05-vnet01"
             ]
         },
         {
